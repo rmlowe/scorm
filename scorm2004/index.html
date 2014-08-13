@@ -8,6 +8,11 @@
 		var result = parent.API_1484_11.Initialize(p);
 		alert('Initialize("' + p + '"): "' + result + '"');
 	}
+	function doTerminate() {
+		var p = document.getElementById('Terminate_parameter').value;
+		var result = parent.API_1484_11.Terminate(p);
+		alert('Terminate("' + p + '"): "' + result + '"');
+	}
 </script>
 <title>SCORM 2004 debugger</title>
 </head>
@@ -15,7 +20,11 @@
 	<h1>SCORM 2004 debugger</h1>
 	<form>
 		<label>parameter <input id="Initialize_parameter" type="text"></label>
-		<input onclick="doInitialize();" type="button">
+		<input onclick="doInitialize();" type="button" value="Initialize">
+	</form>
+	<form>
+		<label>parameter <input id="Terminate_parameter" type="text"></label>
+		<input onclick="doTerminate();" type="button" value="Terminate">
 	</form>
 </body>
 </html>
